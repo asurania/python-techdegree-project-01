@@ -17,14 +17,15 @@ def start_game():
     print("Hello traveler! Welcome to the game of guesses!")
     player_name = input("What is your name? ")
     wanna_play = input("Hi, {}, would you like to play the guessing game? ".format(player_name))
-    if wanna_play.lower() == "yes":
+    while wanna_play.lower() == "yes":
         guess = input("Pick a number between 1 and 10 ")
         if int(guess) == random_number:
             print("Nice! You got it!")
+            break
         elif int(guess) > random_number:
-            print("It's higher")
-        elif int(guess) < random_number:
             print("It's lower")
+        elif int(guess) < random_number:
+            print("It's higher")
     else:
         print("That's cool, have a good one!")
 
@@ -48,7 +49,6 @@ def start_game():
     """
     # write your code inside this function.
 
-start_game()
 if __name__ == '__main__':
     # Kick off the program by calling the start_game function.
     start_game()
