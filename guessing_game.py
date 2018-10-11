@@ -13,7 +13,24 @@ import random
 
 
 def start_game():
-    """Psuedo-code Hints
+    random_number = random.randint(1, 10)
+    print("Hello traveler! Welcome to the game of guesses!")
+    player_name = input("What is your name? ")
+    wanna_play = input("Hi, {}, would you like to play the guessing game? ".format(player_name))
+    if wanna_play.lower() == "yes":
+        guess = input("Pick a number between 1 and 10 ")
+        if int(guess) == int(random_number):
+            print("Nice! You got it!")
+        elif int(guess) > int(random_number):
+            print("It's higher")
+        elif int(guess) < int(random_number):
+            print("It's lower")
+    else:
+        print("That's cool, have a good one!")
+
+
+    """
+    Psuedo-code Hints
     
     When the program starts, we want to:
     ------------------------------------
