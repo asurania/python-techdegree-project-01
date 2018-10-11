@@ -14,18 +14,23 @@ import random
 
 def start_game():
     random_number = int(random.randint(1, 10))
+    attempts = 1
     print("Hello traveler! Welcome to the game of guesses!")
     player_name = input("What is your name? ")
     wanna_play = input("Hi, {}, would you like to play the guessing game? ".format(player_name))
     while wanna_play.lower() == "yes":
         guess = input("Pick a number between 1 and 10 ")
         if int(guess) == random_number:
+            attempts += 1
             print("Nice! You got it!")
+            print("It took you {} attempts".format(attempts))
             break
         elif int(guess) > random_number:
             print("It's lower")
+            attempts += 1
         elif int(guess) < random_number:
             print("It's higher")
+            attempts += 1
     else:
         print("That's cool, have a good one!")
 
