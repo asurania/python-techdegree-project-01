@@ -28,6 +28,7 @@ def start_game():
                 attempts = 1
                 random_number = int(random.randint(1, 10))
                 if play_again.lower() == "no":
+                    print("That's cool, have a good one!")
                     break
             elif int(guess) > random_number:
                 print("It's lower")
