@@ -13,6 +13,8 @@ def start_game():
     player_name = input("What is your name? ")
     wanna_play = input("Hi, {}, would you like to play the guessing game? (Enter Yes/No) ".format(player_name))
     def show_score():
+        # Create code that selects lowest number of attempts that is also not including the 1 it starts with.
+        high_score = min(attempts)
         if attempts == 1:
             print("There is currently no high score, it's yours for the taking!")
         else:
