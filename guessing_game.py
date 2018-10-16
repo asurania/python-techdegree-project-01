@@ -13,7 +13,10 @@ def start_game():
     player_name = input("What is your name? ")
     wanna_play = input("Hi, {}, would you like to play the guessing game? (Enter Yes/No) ".format(player_name))
     def show_score():
-        print("The current high score is {} attempt(s)".format(attempts))
+        if attempts == 1:
+            print("There is currently no high score, it's yours for the taking!")
+        else:
+            print("The current high score is {} attempts".format(attempts))
     show_score()
     while wanna_play.lower() == "yes":
         try:
